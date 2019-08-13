@@ -131,7 +131,7 @@ First, locate the "Crime_SPC" folder and right-click. Click on
 "Properties" to show the location of the folder. Highlight the address shown at 
 "Location:". Within the R Console, click next to the ">" symbol so that the cursor 
 is blinking. Using the setwd() function, within the console, paste the location of 
-the "Crime_SPC" folder within quotation marks and reverse all "\" characters 
+the "Crime_SPC" folder within quotation marks and reverse all "\\" characters 
 (for Windows R uses "/" within address locations and will error if not changed). 
 At the end of the address type "/Crime_SPC/" to complete the address. Then hit 
 the "Enter" key. An example if located on the desktop may look like this:
