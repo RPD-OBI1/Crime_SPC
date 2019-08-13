@@ -1,0 +1,5 @@
+This folder initially contains sample data to demostrate the capabilities of the Crime_SPC project.
+
+To use actual data, the user will clean and format data for their agency to fit the structure of the sample data. 
+This process is explained in more detail in the README file. These two sample files will then be replaced with actual 
+data using the same file names and placed in this folder.

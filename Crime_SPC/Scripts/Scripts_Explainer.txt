@@ -1,0 +1,1 @@
+This folder contains all scripts used for the Crime_SPC project. Users should adjust the working directory in these scripts as instructed in the project README file.

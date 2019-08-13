@@ -1,0 +1,1 @@
+This folder contains/ will contain the data files created from the "2_Run_All_Sims_Proj_Index_Scores.R" file.

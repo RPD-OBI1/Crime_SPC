@@ -1,0 +1,1 @@
+This folder contains the Function.R script sourced to make all calculations required by the scripts in the Crime_SPC project.

@@ -1,0 +1,1 @@
+This folder will contain the most up to date image files of the Index Scores plots created by the "3_Run_All_Plots.R" file.
