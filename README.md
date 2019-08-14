@@ -152,7 +152,7 @@ is placed at the beginning of each script and should be updated with the locatio
 the "Crime_SPC" folder as described above.
 
 
-Run Scripts
+Run scripts
 ===========
 
 This project is broken down into three main tasks:
@@ -227,7 +227,7 @@ script is executed.
 Once the tasks have been completed, close R. There is no need to save the workspace.
 
 
-Contact Information
+Contact information
 ===================
 
 For questions or comments contact kevin.hoyt@cityofrochester.gov
