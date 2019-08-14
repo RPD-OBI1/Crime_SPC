@@ -11,7 +11,7 @@ The process will go as follows:
 - Set working directory for project
 - Run scripts
 
-If you already have R on your machine and have or can install the tidyverse package 
+If you already have R-3.6.0 or greater on your machine and have or can install the tidyverse package 
 and the gridExtra package you can skip ahead to an appropriate section.
 
 
