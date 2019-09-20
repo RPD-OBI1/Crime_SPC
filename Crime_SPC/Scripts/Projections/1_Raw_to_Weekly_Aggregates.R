@@ -7,7 +7,6 @@
 # setwd("YOUR_PATH/Crime_SPC/") # This needs to be set if using scripts independently of the "Run_All....R" files
 
 source("Functions/Functions.R")
-
 library(dplyr)
 
 # Read in bounds to gather all sections and crimetypes possible to account for everything.

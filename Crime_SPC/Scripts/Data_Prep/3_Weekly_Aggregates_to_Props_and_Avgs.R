@@ -6,6 +6,7 @@
 # setwd("YOUR_PATH/Crime_SPC/") # This needs to be set if using scripts independently of the "Run_All....R" files
 
 source("Functions/Functions.R")
+library(dplyr)
 
 # Read in aggregate tables made prior and saved in the "Data" folder
 section_weekly_aggregate <- read.csv(file = "Data/Data_Prep/Aggregate_Data_Weekly_Section.csv",

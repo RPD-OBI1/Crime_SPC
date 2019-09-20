@@ -6,7 +6,6 @@
 # setwd("YOUR_PATH/Crime_SPC/") # This needs to be set if when doing plots
 
 source("Functions/Functions.R")
-
 library(tidyverse)
 
 # Read in tables made prior and saved in the "Data" folder

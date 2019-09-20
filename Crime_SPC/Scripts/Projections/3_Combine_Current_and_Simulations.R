@@ -6,6 +6,7 @@
 # setwd("YOUR_PATH/Crime_SPC/") # This needs to be set if using scripts independently of the "Run_All....R" files
 
 source("Functions/Functions.R")
+library(dplyr)
 
 # Read in tables made prior and saved in the "Data" folder
 

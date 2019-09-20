@@ -6,7 +6,6 @@
 # setwd("YOUR_PATH/Crime_SPC/") # This needs to be set if when doing plots
 
 source("Functions/Functions.R")
-
 library(tidyverse)
 
 # RPD Color selections (in the form of a named vector to work with some manual fill arguments later in plots) - modify if desired

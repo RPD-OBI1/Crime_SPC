@@ -7,6 +7,7 @@
 # setwd("YOUR_PATH/Crime_SPC/") # This needs to be set if using scripts independently of the "Run_All....R" files
 
 source("Functions/Functions.R")
+library(dplyr)
 
 # Weighted Averages Table
 
