@@ -191,8 +191,8 @@ Once the working directory is updated, the user is then ready to execute task 1.
 To do so, highlight all the contents of the script in the editor window either by 
 using the mouse or by clicking within the window and hitting "Ctrl + A". If all lines
 are highlighted, either click the third button on the toolbar, which on hover reads
-"Run line or selection" or hit "Ctrl + Enter". This will execute the four subtasks listed
-within the script. If the script was able to successfully run, ten .csv files should
+"Run line or selection" or hit "Ctrl + R". This will execute the four subtasks 
+listed within the script. If the script was able to successfully run, ten .csv files should
 show up in the "Data_Prep" folder within the "Data" folder of the Crime_SPC.
 If the files are there, the script can be saved and closed. This script only needs to
 run once since it uses the historical data to create the bounds.
