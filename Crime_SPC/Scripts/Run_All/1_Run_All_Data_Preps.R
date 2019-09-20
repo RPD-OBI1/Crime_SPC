@@ -1,7 +1,7 @@
 # This script runs all data preparation components of the project
 
 # This path must be set to the location of the "Crime_SPC" folder
-setwd("C:/Users/Hoytk/Desktop/Crime_SPC/") 
+setwd("YOURPATH/Crime_SPC/") 
 
 source("Scripts/Data_Prep/1_Raw_to_Aggregates.R")
 source("Scripts/Data_Prep/2_Yearly_Aggregates_to_Yearly_Bounds.R")
