@@ -32,7 +32,6 @@ greater on your Windows computer. For more detailed information on installing R 
 can visit https://cran.r-project.org/bin/windows/base/rw-FAQ.html. After the 
 download is complete, open the R application.
 
-
 Install required packages
 =========================
 
@@ -52,12 +51,7 @@ should notify you by returning:
 
 R will also notify you the location on your computer where the packages were 
 downloaded for your future reference. If R was unable to correctly install please 
-visit:
-
-	https://cran.r-project.org/bin/windows/base/rw-FAQ.html#Packages 
-
-to resolve.
-
+visit https://cran.r-project.org/bin/windows/base/rw-FAQ.html#Packages to resolve.
 
 Format crime data specific to project requirements
 ==================================================
@@ -160,7 +154,6 @@ scripts in this project do not overwrite it. To alleviate this, a setwd() functi
 is placed at the beginning of each script and should be updated with the location of
 the "Crime_SPC" folder as described above.
 
-
 Run scripts
 ===========
 
@@ -234,7 +227,6 @@ The files created in tasks 2 and 3 will overwrite the previous files each time t
 script is executed.
 
 Once the tasks have been completed, close R. There is no need to save the workspace.
-
 
 Contact information
 ===================
