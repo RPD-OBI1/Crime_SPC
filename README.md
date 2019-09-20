@@ -1,22 +1,31 @@
 # Crime_SPC
 A simple method for monitoring crime levels in your city
 
-This document describes the steps that you need to take after you download and 
-save the "Crime_SPC" folder to a location of your choice on your Windows computer. 
+This document describes the steps from downloading the "Crime_SPC" folder to a location of your 
+choice on your Windows computer to running scripts for monitoring crime levels in your agency. 
+
 The process will go as follows:
 
+- Download and save the "Crime_SPC" folder from github
 - Download and Open R for Windows
 - Install required packages
 - Format crime data specific to project requirements
 - Set working directory for project
 - Run scripts
 
-If you already have R-3.6.0 or greater on your machine and have or can install the tidyverse package 
-and the gridExtra package you can skip ahead to an appropriate section.
+Download Crime_SPC folder from github
+=====================================
 
+Click the green button "Clone or download" at the top of this screen. From the dropdown, click on "Download ZIP".
+This should download a "Crime_SPC-master.zip" folder. Locate this folder in your download location, and open the
+folder. In this folder the "Crime_SPC" folder can be found. This folder is required for the project. The user
+should save the "Crime_SPC" folder to a location of which the user decides.
 
 Download R for Windows
 ======================
+
+If you already have R-3.6.0 or greater on your machine and have or can install the tidyverse package 
+and the gridExtra package you can skip ahead to an appropriate section.
 
 Go to https://www.r-project.org/ and follow instructions to download R-3.6.0 or 
 greater on your Windows computer. For more detailed information on installing R you 
