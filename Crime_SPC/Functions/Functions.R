@@ -466,3 +466,59 @@ Plot_Index_Score <- function(Index_Score_Table = NULL,
   return(g)
   
 }
+
+
+## This function is used in 3 year increments to adjust the bounds as needed
+## It takes the 3 years of data that the initial bounds were created on as well as the next 3 years (6 years total)
+## and compares the initial measure of center initially created with the average prediction from 7 forecast models
+## The value that is least is the one that is used for the next three years
+Update_Bound_Values <- function(crime_last_6yr_vec = NULL, crime_current_MoC = NULL){
+  
+  ### INPUTS
+  # "crime_last_6yr_vec" is a numeric vector of annual crime totals for the last complete 6 years of a specific crimetype
+  # "crime_current_MoC" is the numeric value of the last measure of center used
+  
+  ### PROCESS
+  # Create a time series object from "crime_last_6yr_vec"
+  # Create 7 forecast models and determine the model with the least RMSE
+  # Compare the predicted value from selected model with the current MoC (previously used for 3 years)
+  
+  ### OUTPUT
+  # A numeric value corresponding to the updated calculated MoC, determined from whichever is less (or the same if equal):
+  #   - the forecasted value from the forecast model with the least model (RMSE) error measure or 
+  #   - the current MoC
+  
+  library(dplyr)
+  library(forecast)
+  
+  temp_ts <- ts(crime_last_6yr_vec)
+  
+  fit.mean <- meanf(temp_ts, h = 1, level = 0.95, fan = T)
+  fit.naive <- naive(temp_ts, h = 1, level = 0.95, fan = T)
+  fit.drift <- rwf(temp_ts, h = 1, drift = T, level = 0.95, fan = T)
+  fit.holt <- holt(temp_ts, h = 1)
+  fit.ses <- ses(temp_ts, h = 1)
+  fit.arima <- auto.arima(temp_ts)
+  fit.spl <- splinef(y = temp_ts, h = 1)
+  
+  forecast.mean <- as.numeric(forecast(fit.mean, h = 1)$mean)
+  forecast.naive <- as.numeric(forecast(fit.naive, h = 1)$mean)
+  forecast.drift <- as.numeric(forecast(fit.drift, h = 1)$mean)
+  forecast.holt <- as.numeric(forecast(fit.holt, h = 1)$mean)
+  forecast.ses <- as.numeric(forecast(fit.ses, h = 1)$mean)
+  forecast.arima <- as.numeric(forecast(fit.arima, h = 1)$mean)
+  forecast.spl <- as.numeric(forecast(fit.spl, h = 1)$mean)
+  
+  forecast.mean <- mean(c(forecast.mean,
+                          forecast.naive,
+                          forecast.drift,
+                          forecast.holt,
+                          forecast.ses,
+                          forecast.arima,
+                          forecast.spl))
+  
+  updated.MoC <- ifelse(forecast.mean < crime_current_MoC, forecast.mean, crime_current_MoC)
+  
+  return(updated.MoC)
+  
+}
