@@ -231,4 +231,4 @@ Once the tasks have been completed, close R. There is no need to save the worksp
 Contact information
 ===================
 
-For questions or comments contact kevin.hoyt@cityofrochester.gov
+For questions or comments contact adrian.martin@cityofrochester.gov
