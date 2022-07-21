@@ -27,6 +27,25 @@ curr_year <- read.csv(file = "Data/User_Data/Current_Year_Raw_Data.csv",
   mutate(Section = factor(Section, levels = sec),     # Make factors to account for all combinations found in the bounds file
          CrimeType = factor(CrimeType, levels = crm))
 
+# This portion of the script updates the simulated data that this package comes with
+# The package was written in 2019. Running the scripts in 2022 results in 
+# no simulations, since 2019 is a completed year
+# This script takes the "current year" data (originally 2019)
+# and brings it to the actual current year
+# The script also takes the historical data and brings it up to prior years
+
+library(lubridate)
+
+yearOffset <- year(Sys.Date()) - 2019
+
+curr_year <- curr_year %>%
+  mutate(Date = Date %>%
+           as.character() %>%
+           as.Date() %m+%
+           months(yearOffset * 12))
+
+#### Back to prior script ####
+
 # Create aggregate tables
 weekly_section_data <- Create_Weekly_Aggregate(data_input = curr_year, city_wide = FALSE)
 weekly_citywide_data <- Create_Weekly_Aggregate(data_input = curr_year, city_wide = TRUE)

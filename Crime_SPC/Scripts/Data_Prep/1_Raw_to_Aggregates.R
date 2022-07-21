@@ -16,6 +16,25 @@ historical <- read.csv(file = "Data/User_Data/Historical_Raw_Data.csv",
   mutate(CrimeType = gsub(x = CrimeType, pattern = "/", replacement = "_"),
          Section = gsub(x = Section, pattern = "/", replacement = "_"))
 
+# This portion of the script updates the simulated data that this package comes with
+# The package was written in 2019. Running the scripts in 2022 results in 
+# no simulations, since 2019 is a completed year
+# This script takes the "current year" data (originally 2019)
+# and brings it to the actual current year
+# The script also takes the historical data and brings it up to prior years
+
+library(lubridate)
+
+yearOffset <- year(Sys.Date()) - 2019
+
+historical <- historical %>%
+  mutate(Date = Date %>%
+           as.character() %>%
+           as.Date() %m+%
+           months(yearOffset * 12))
+
+#### Back to prior script ####
+
 # Create aggregate tables
 weekly_section_data <- Create_Weekly_Aggregate(data_input = historical, city_wide = FALSE)
 weekly_citywide_data <- Create_Weekly_Aggregate(data_input = historical, city_wide = TRUE)
